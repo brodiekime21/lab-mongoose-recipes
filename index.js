@@ -68,7 +68,7 @@
     })
 
     .then(()=>{
-      return Recipe.findOneAndUpdate({title: 'Rigatoni alla Genovese'}, {$set:{duration: 100}})
+      return Recipe.findOneAndUpdate({title: 'Rigatoni alla Genovese'}, {$set:{duration: 100}}, {new: true})
       .then(() => {
         console.log("Changes made")
       })
